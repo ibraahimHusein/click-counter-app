@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Click counter</title>
+        <style>
+           body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 50px;
+           }
+           button{
+            font-size: 24px;
+            padding: 10px 20px;
+            margin-top: 20px;
+           }
+           #count{
+            font-size: 24px;
+            color: green;
+           }
+        </style>
+    </head>
+    <body>
+           <h1>Click Counter</h1> 
+           <div id="count">0</div>
+           <button id="clickBtn">Click Me!</button>
+           <button id="ResetBtn">Reset</button>
+           <script>
+            let countDisplay = document.getElementById("count");
+            let button = document.getElementById("clickBtn");
+            let count = 0;
+            button.addEventListener("click",
+               function() {
+                count++; // kudar 1 mar kasta oo la taabto
+                countDisplay.innerHTML = count;
+               }
+            );
+            let ResetBtn = document.getElementById("ResetBtn");
+            ResetBtn.addEventListener("click",
+                function() {
+                    count = 0
+                    countDisplay.innerHTML = count
+                }
+            );
+
+           </script>
+
+</body>
+</html>
